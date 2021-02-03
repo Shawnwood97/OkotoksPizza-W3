@@ -30,3 +30,7 @@ iframe {
   text-align: center;
   margin: 20px 0;
 }
+
+.big-box {
+  height: 100vh;
+}
