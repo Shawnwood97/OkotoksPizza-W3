@@ -9,6 +9,16 @@ header {
   align-items: center;
 }
 
+h1 span{
+  transition-property: font-size;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(1, -0.67, 0.37, 2.26);
+}
+
+h1 span:hover {
+  font-size: 3em;
+}
+
 .logo {
   justify-self: start;
 }
@@ -41,6 +51,15 @@ iframe {
   width: 200px;
   border-radius: 0;
   border: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.15,-0.32, 0.8, 1.76);
+}
+
+.chef:active {
+  transform: rotate(360deg);
+  height: 800px;
+  width: 800px;
 }
 
 .images {
@@ -79,11 +98,20 @@ a:hover {
   font-weight: bold;
 }
 
-img:active {
-  opacity: 0%;
+.images img:active {
+  animation-name: imageAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 
 .welcome {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@keyframes imageAnimation {
+  0% { opacity: 100; }
+  25% { opacity: 75; }
+  50% { opacity: 90; }
+  75% { opacity: 0; }
 }
