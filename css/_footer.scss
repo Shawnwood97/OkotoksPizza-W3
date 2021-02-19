@@ -1,0 +1,7 @@
+footer {
+  @include centerGrid();
+  min-height: 5vh;
+  background: rgb(124, 0, 0);
+  width: 100%;
+  color: $artTnL;
+}

@@ -1,86 +1,99 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  display: grid;
-  background:rgb(46, 46, 46);
-}
-
 header {
+  display: -ms-grid;
   display: grid;
-  background: rgb(124, 0, 0);
-  min-height: 10vh;
   place-items: center;
+  background: #7c0000;
+  min-height: 10vh;
 }
 
-header>h1 {
+header > h1 {
   font-size: 20px;
-  color: rgb(248, 196, 196);
+  color: #f8c4c4;
 }
 
-header>nav {
+header > nav {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
   justify-items: center;
   width: 100%;
 }
 
-header>nav>a {
+nav > a {
   font-size: 12px;
-  color: rgb(248, 196, 196);
+  color: #f8c4c4;
   text-decoration: none;
   font-weight: bold;
 }
 
-.section1 {
+footer {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+  min-height: 5vh;
+  background: #7c0000;
+  width: 100%;
+  color: #cccccc;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  background: #2e2e2e;
+}
+
+.section1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   min-height: 57vh;
   gap: 5px;
   margin: 5px;
 }
 
-.section1>article {
+.section1 > article {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 1fr 1fr;
   place-items: center;
-  background:rgb(66, 66, 66);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  background: #424242;
   min-height: 28vh;
 }
 
 .section2 {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  min-height: 28vh;
+  display: -ms-grid;
   display: grid;
   place-items: center;
-  background:rgb(66, 66, 66);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  min-height: 28vh;
+  background: #424242;
   margin: 5px;
 }
 
-article>h1,
-article>a,
 article {
-  color: rgb(204, 204, 204);
+  color: #cccccc;
 }
 
-footer {
-  display: grid;
-  place-items: center;
-  min-height: 5vh;
-  background: rgb(124, 0, 0);
-  width: 100%;
+article > a {
+  color: #cccccc;
 }
 
 @media only screen and (min-width: 532px) {
   /* changing color to show I understand some */
-  article>h1,
-  article>a,
+  article > a,
   article {
-    color: rgb(197, 93, 93);
+    color: #c55d5d;
   }
 }
 
@@ -89,23 +102,22 @@ footer {
     min-height: 85vh;
   }
   section {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
   }
-
-article>h1,
-article>a,
-article {
-  color: rgb(204, 204, 204);
-}
-
+  article > a,
+  article {
+    color: #cccccc;
+  }
   .section1 {
     gap: 5px;
     margin: 5px;
   }
-
   .section2 {
     margin: 5px;
     margin-left: 0;
   }
 }
+/*# sourceMappingURL=contact.css.map */

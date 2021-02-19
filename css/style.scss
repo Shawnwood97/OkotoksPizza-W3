@@ -1,0 +1,117 @@
+.main-grid {
+  display: grid;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+h1 span{
+  transition-property: font-size;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(1, -0.67, 0.37, 2.26);
+}
+
+h1 span:hover {
+  font-size: 3em;
+}
+
+.logo {
+  justify-self: start;
+}
+
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: end;
+}
+
+nav a {
+  padding: 0 10px;
+}
+
+img {
+  height: 200px;
+  border-radius: 200px;
+  margin: auto;
+  border: 1px solid #000;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  border-radius: 50px;
+}
+
+.chef {
+  display: block;
+  width: 200px;
+  border-radius: 0;
+  border: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.15,-0.32, 0.8, 1.76);
+}
+
+.chef:active {
+  transform: rotate(360deg);
+  height: 800px;
+  width: 800px;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.big-box {
+  height: 100vh;
+}
+
+.image-header {
+  text-align: center;
+}
+
+footer>span {
+  font-weight: bold;
+}
+
+img+article {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.home-link:link {
+  color: black;
+}
+
+.reviews-link:visited {
+  color: red;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.images img:active {
+  animation-name: imageAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@keyframes imageAnimation {
+  0% { opacity: 100; }
+  25% { opacity: 75; }
+  50% { opacity: 90; }
+  75% { opacity: 0; }
+}
